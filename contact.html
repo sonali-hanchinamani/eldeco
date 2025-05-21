@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Eldeco Ballads Of Bliss</title>
+  <meta name="description" content="Contact Eldeco Ballads Of Bliss for enquiries, site visits, and bookings. Call or fill our contact form." />
+  <meta name="keywords" content="Eldeco Ballads Of Bliss Contact, Enquiry Form, Book Site Visit, Call +91 7669 555 935" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      background-color: #002e29;
+      color: white;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+     
+    }
+    h1 {
+      color: #f9d342;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2.5rem;
+      color: #f9d342;
+    }
+    p {
+      font-size: 1.1rem;
+      color: #e0e0e0;
+    }
+    .contact-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+      margin-top: 2rem;
+      margin-bottom: 3rem;
+    }
+    .contact-form label {
+      grid-column: span 2;
+      font-weight: 600;
+      color: #ccc;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      padding: 0.8rem;
+      border-radius: 6px;
+      border: none;
+      font-size: 1rem;
+      width: 100%;
+      background-color: #fff;
+      color: #212121;
+    }
+    .contact-form textarea {
+      resize: vertical;
+      min-height: 120px;
+      grid-column: span 2;
+    }
+    .contact-form button {
+      background-color: #f9d342;
+      color: #212121;
+      font-weight: bold;
+      padding: 0.8rem 1.2rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      grid-column: span 2;
+      transition: background-color 0.3s ease;
+    }
+    .contact-form button:hover {
+      background-color: #e1b500;
+    }
+    .contact-info {
+      background-color: #01443b;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+    }
+    .contact-info a {
+      color: #f9d342;
+      text-decoration: none;
+    }
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+    .floating-call {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #f9d342;
+      color: white;
+      font-size: 1.7rem;
+      padding: 0.85rem 1.1rem;
+      border-radius: 50%;
+      text-decoration: none;
+      box-shadow: 0 0 10px rgba(255,111,97,0.7);
+      z-index: 1000;
+      animation: pulse 2.5s infinite ease-in-out;
+      transition: background-color 0.3s ease;
+    }
+    .floating-call:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    @media (max-width: 768px) {
+      .contact-form {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container header-container">
+        <a href="index.html" class="logo" style="color: white; font-size: 1.5rem; font-weight: 700; text-decoration: none;">ELDECO</a>
+
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="location.html">Location</a></li>
+          <li><a href="floor-plans.html">Floor Plans</a></li>
+          <li><a href="amenities.html">Amenities</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="tel:+917669555935" class="btn btn-primary call-btn">Call +91 7669 555 935</a>
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="contact-wrapper">
+      <section>
+        <h1>Contact Us</h1>
+        <p>Have questions or want to book a site visit? Reach out to us via the form below or call directly.</p>
+  
+        <form class="contact-form" action="https://formspree.io/f/mvgangzk" method="POST">
+            <input type="hidden" name="_next" value="thank-you.html" />
+
+          <label for="name">Name*</label>
+          <input type="text" id="name" name="name" required placeholder="Your name" />
+  
+          <label for="email">Email*</label>
+          <input type="email" id="email" name="email" required placeholder="Your email" />
+  
+          <label for="phone">Phone*</label>
+          <input type="tel" id="phone" name="phone" required placeholder="Your phone number" />
+  
+          <label for="message">Message*</label>
+          <textarea id="message" name="message" rows="5" required placeholder="Your message"></textarea>
+          <input type="hidden" name="_subject" value="New Contact Form Submission from Eldeco Site" />
+
+          <button type="submit">Submit</button>
+        </form>
+       
+        <section class="contact-info">
+          <h2>Contact Details</h2>
+          <p><strong>Phone:</strong> <a href="tel:+917669555935">+91 7669 555 935</a></p>
+          <p><strong>Address:</strong> Plot No-GH-1A/2, Yamuna Expressway, Sector 22D, Greater Noida, UP 203207</p>
+        </section>
+      </section>
+    </div>
+  </main>
+  
+
+  <a href="tel:+917669555935" class="floating-call" aria-label="Call Now">📞</a>
+
+  <footer class="footer container">
+    <p>&copy; 2025 Eldeco Group. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const navList = document.querySelector('.nav-list');
+    navToggle.addEventListener('click', () => navList.classList.toggle('nav-list--open'));
+  </script>
+</body>
+</html>

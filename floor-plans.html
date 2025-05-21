@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Floor Plans | Eldeco Ballads Of Bliss</title>
+  <meta name="description" content="Explore 3 & 4 BHK apartment floor plans at Eldeco Ballads Of Bliss, featuring optimal space utilization, servant quarters, and family-friendly designs." />
+  <meta name="keywords" content="Eldeco Floor Plans, 3 BHK Flat Noida, 4 BHK Apartment Greater Noida, Servant Room, Typical Tower Layout" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      background-color: #002e29;
+      color: white;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 2rem auto;
+    }
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      color: #f9d342;
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+    .card {
+      background-color: #01443b;
+      border-radius: 8px;
+      padding: 1rem;
+      flex: 1 1 300px;
+      max-width: 340px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.3);
+    }
+    .card h2 {
+      color: #f9d342;
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .image-row {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+    .image-row img {
+      height: 200px;
+      cursor: pointer;
+      border-radius: 6px;
+      border: 2px solid #eee;
+    }
+    .download-link {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .download-link a {
+      color: #f9d342;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+    }
+    .modal img {
+      max-width: 90vw;
+      max-height: 90vh;
+      border-radius: 10px;
+    }
+    .modal.active {
+      display: flex;
+    }
+    .modal:after {
+      content: "\2715";
+      position: absolute;
+      top: 1rem;
+      right: 2rem;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+    }
+    .header {
+      background-color: #00332e;
+      padding: 1rem 0;
+    }
+    .header-container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      color: white;
+      font-weight: bold;
+      font-size: 1.2rem;
+      text-decoration: none;
+    }
+    .nav-list {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      padding: 0;
+      margin: 0;
+    }
+    .nav-list li a {
+      color: #f9d342;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .call-btn {
+      background-color: #f9d342;
+      color: #00332e;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    @media (max-width: 768px) {
+      .nav-list {
+        display: none;
+        flex-direction: column;
+        background: #00332e;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        padding: 1rem;
+        border-radius: 8px;
+        z-index: 1000;
+      }
+      .nav-toggle {
+        display: block;
+        background: none;
+        color: white;
+        font-size: 1.5rem;
+        border: none;
+      }
+      .nav-list--open {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-container">
+      <a href="index.html" class="logo">ELDECO</a>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="location.html">Location</a></li>
+          <li><a href="floor-plans.html" class="active" aria-current="page">Floor Plans</a></li>
+          <li><a href="amenities.html">Amenities</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="tel:+917669555935" class="call-btn">Call +91 7669 555 935</a>
+      <button class="nav-toggle" onclick="toggleNav()">☰</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <h1>Floor Plans</h1>
+    <p style="text-align:center; max-width: 800px; margin: 0 auto 2rem;">
+      Explore a range of thoughtfully designed 3 & 4 BHK flats at Eldeco Ballads Of Bliss. Our homes combine modern design with practical layouts, spacious balconies, and dedicated utility zones.
+    </p>
+
+    <div class="cards">
+      <div class="card">
+        <h2>3 BHK – Super Area 1550 sq.ft</h2>
+        <p>Designed for nuclear families, this configuration includes 3 spacious bedrooms, 2 bathrooms, a living room, kitchen, and balconies ensuring privacy and sunlight.</p>
+      </div>
+      <div class="card">
+        <h2>3 BHK + ST – Super Area 1850 sq.ft</h2>
+        <p>Includes a separate servant room with toilet. Ideal for larger families or those needing help, this layout balances functionality with luxury.</p>
+      </div>
+      <div class="card">
+        <h2>4 BHK + ST – Super Area 2850 sq.ft</h2>
+        <p>Spacious and premium. This floor plan features 4 large bedrooms, a dedicated servant room, expansive living/dining area, and oversized balconies.</p>
+      </div>
+    </div>
+
+    <div class="image-row">
+      <img src="Site-Layout-Plan.jpeg" alt="Eldeco Typical Tower Floor Plan with 3BHK & 4BHK Units" onclick="openModal(this.src)" />
+      <img src="Tower-floor-plan.jpeg" alt="Eldeco Site Layout Plan showing towers, amenities and road network" onclick="openModal(this.src)" />
+    </div>
+
+    <div class="download-link">
+      <a href="Site-Layout-Plan.jpeg" download>Download Site Layout Plan</a> |
+      <a href="Tower-floor-plan.jpeg" download>Download Tower Floor Plan</a>
+    </div>
+  </div>
+
+  <div class="modal" id="imageModal" onclick="this.classList.remove('active')">
+    <img id="modalImg" src="" alt="Zoomed Floor Plan" />
+  </div>
+
+  <script>
+    function openModal(src) {
+      const modal = document.getElementById("imageModal");
+      const modalImg = document.getElementById("modalImg");
+      modalImg.src = src;
+      modal.classList.add("active");
+    }
+    function toggleNav() {
+      const navList = document.querySelector(".nav-list");
+      navList.classList.toggle("nav-list--open");
+    }
+  </script>
+</body>
+</html>
